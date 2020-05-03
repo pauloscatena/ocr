@@ -6,12 +6,19 @@ namespace ImgCharReader.Test
     public class ImageReaderService
     {
         [Theory]
-        [InlineData("54NCN", "../testing/example.jpeg")]
+        [InlineData("54NCN", ".\\images\\example.jpeg")]
         public void TestExampleImage(string expectedText, string filePath)
         {
-            ImgCharReader.Domain.ImageReaderService service = new ImgCharReader.Domain.ImageReaderService();
-            string text = service.GetText(filePath);
-            Assert.Equal(text, expectedText);
+            try
+            {
+                ImgCharReader.Domain.ImageReaderService service = new ImgCharReader.Domain.ImageReaderService();
+                string text = service.GetText(filePath);
+                Assert.Equal(text, expectedText);
+            }
+            catch(Exception ex)
+            {
+                throw ex;
+            }
         }
     }
 }
