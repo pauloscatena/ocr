@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Domain\ImgCharReader.Domain\ImgCharReader.Domain.csproj" />
+    <ProjectReference Include="..\..\Domain\ImgCharReader.Domain.GoogleVision\ImgCharReader.Domain.GoogleVision.csproj" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+</Project>
